@@ -1,0 +1,15 @@
+name: scheduled_task
+
+on:
+  schedule:
+  - cron: "0 8 * * *" # every day at 8am
+
+jobs:
+  run-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v4
+
+      - name: Execute script
+        run: Echo "Scheduled task executed"
