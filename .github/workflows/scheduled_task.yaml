@@ -3,6 +3,7 @@ name: scheduled_task
 on:
   schedule:
   - cron: "0 8 * * *" # every day at 8am
+  workflow_dispatch: # manual triggers
 
 jobs:
   run-task:
